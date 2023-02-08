@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+
+
+    <script src="libs/angular-1.7.9/angular.min.js"></script>
+    <link rel="stylesheet"
+      href="libs/FortAwesome-Font-Awesome-96cafbd/css/all.min.css">
+
+    <script src="js/Register.js"></script>
+  </head>
+  <body ng-app="powah">
+    <div class="container col-4" ng-controller ="infoCtrl">
+
+      <div class="form-group">
+        <label for="fullName">Họ và tên</label>
+        <input ng-model="fullName" type="text"
+          class="form-control" name="fullName" id="fullName"
+          aria-describedby="fullNamehelpId" placeholder="Nhập họ và tên">
+        <small id="fullNamehelpId" class="form-text text-muted">Tên không được
+          để trống</small>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Lương</label>
+        <div class="input-group">
+          <input ng-model="salary" type="number" class="form-control" name="salary" id="salary"
+            aria-describedby="salaryhelpId" placeholder="Nhập tiền lương tháng">
+          <div style="border: 1px solid gray; text-align: center; padding-top:
+            5px;" class="">VNĐ</div>
+        </div>
+        <small id="salaryhelpId" class="form-text text-muted">Lương không được
+          để trống</small>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Giới tính</label>
+        <div>
+          <div class="form-check form-check-inline" >
+            <label class="form-check-label">
+              <input  ng-init="gender= 'Male'" ng-model="gender"  class="form-check-input" type="radio" name="gender"
+                id="genderMale" value="Male"> Nam
+            </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input ng-model="gender" class="form-check-input" type="radio" name="genderMale"
+                id="gender" value="Female"> Nữ
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Độ tuổi</label>
+        <select ng-model="age" ng-init="age='20'" id="cars">
+          <option value="20">Dưới 20</option>
+          <option value="40">Dưới 40</option>
+          <option value="60">Dưới 60</option>
+        </select>
+      </div>
+      <div class="form-group container">
+        <h6>{{ham(salary, gender, age)}}</h6>
+      </div>
+      <Show-value>
+
+      </Show-value>
+    </div>
+
+
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
